@@ -25,9 +25,7 @@ public class GStack {
         if (this.stack.isEmpty()) {
             throw new StackTooSmallException("pop");
         }
-
         return this.stack.remove(this.stack.size() - 1);
-
     }
 
     //returns the last element of the stack without modifying the stack
@@ -45,8 +43,7 @@ public class GStack {
         }
         int[] help = new int[n];
         for (int i = n - 1; i >= 0; i--) {
-            help[i] = this.stack.get(this.stack.size() - 1);
-            this.stack.remove(this.stack.size() - 1);
+            help[i] = this.stack.remove(this.stack.size() - 1);
         }
         return help;
     }
