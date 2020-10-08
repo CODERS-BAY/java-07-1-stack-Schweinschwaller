@@ -19,12 +19,12 @@ public class GStack {
     }
 
     public int pop() throws StackTooSmallException {
-        if (stack.isEmpty()) {
+        if (this.stack.isEmpty()) {
             throw new StackTooSmallException("pop");
         }
-        int help = this.stack.get(this.stack.size() - 1);
-        this.stack.remove(this.stack.size() - 1);
-        return help;
+
+        return this.stack.remove(this.stack.size() - 1);
+
     }
 
     public int peek() throws StackTooSmallException {
